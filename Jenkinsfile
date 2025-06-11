@@ -12,11 +12,11 @@ pipeline {
             }
         }
 
-        stage('Compile the Code') {
+        stage('test the Code') {
             steps {
                 echo 'Hello, we started the Code Compile Process'
                 withMaven(maven: 'Maven') {
-                    sh 'mvn compile'
+                    sh 'mvn Test '
                 }
                 echo 'Hello, we ended the Compile Process'
             }
