@@ -23,14 +23,15 @@ pipeline {
                 echo 'Hello, we ended the Code Validation Process'
             }
         }
-       stage('Compilee the Code') {
+
+        stage('Compile the Code') {
             steps {
                 echo 'Hello, we started the Code Compile Process'
                 withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'Maven', mavenSettingsConfig: '', traceability: true) {
-                    sh 'mvn validate'
+                    sh 'mvn compile'
                 }
-                echo 'Hello, we ended the Compile Validation Process'
+                echo 'Hello, we ended the Compile Process'
             }
-
+        }
     }
 }
