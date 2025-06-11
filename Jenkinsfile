@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven' // Make sure 'Maven' is defined in Global Tool Configuration
-    }
+  
 
     stages {
         stage('SCM Checkout') {
@@ -17,7 +15,7 @@ pipeline {
         stage('Compile the Code') {
             steps {
                 echo 'Hello, we started the Code Compile Process'
-                withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'Maven', mavenSettingsConfig: '', traceability: true) {
+                withMaven(maven: 'Maven') {
                     sh 'mvn compile'
                 }
                 echo 'Hello, we ended the Compile Process'
