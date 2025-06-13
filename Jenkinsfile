@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Hello, we started the Code Compile Process'
                 withMaven(maven: 'Maven') {
-                    sh 'mvn package '
+                    sh 'mvn package'
                 }
                 echo 'Hello, we ended the Compile Process'
             }
