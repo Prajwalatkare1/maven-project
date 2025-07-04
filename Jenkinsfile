@@ -22,10 +22,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy  the tom cat server') {
             steps {
-                echo 'Deploying application..................'
-                // Add your deploy command here, e.g., scp, kubectl apply, etc.
+              sshagent(['DEVCICD']) {
+                	sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@16.16.186.222:/usr/share/tomcat/webapps'
+    
+}
             }
         }
     }
