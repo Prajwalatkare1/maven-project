@@ -31,6 +31,7 @@
 
   <build>
     <plugins>
+<<<<<<< HEAD
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -38,6 +39,19 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+=======
+    <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.10.1</version> <!-- or the latest -->
+  <configuration>
+    <source>11</source> <!-- or 8, depending on what you're using -->
+    <target>11</target>
+  </configuration>
+</plugin>
+
+
+>>>>>>> d19b78b (Added all the files 04.07.2025)
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
