@@ -26,7 +26,12 @@ pipeline {
             steps {
             
                 sshagent(['DEVCICD']) {
-         kngoindo
+
+                    
+	sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@16.16.186.222:/usr/share/tomcat/webapps'
+
+
+        
 }           
             }
         }
