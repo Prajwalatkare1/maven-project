@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
+<<<<<<< HEAD
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+=======
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -32,6 +45,7 @@
   <build>
     <plugins>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -55,6 +69,21 @@
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
+=======
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+        <configuration>
+          <source>11</source>
+          <target>11</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.1</version>
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
@@ -62,11 +91,16 @@
 
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
+<<<<<<< HEAD
+=======
+        <version>3.12.1</version> <!-- updated to latest 3.x version -->
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
         <configuration>
           <reportPlugins>
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
+<<<<<<< HEAD
 
             <plugin>
               <artifactId>maven-jxr-plugin</artifactId>
@@ -84,11 +118,28 @@
               <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
 
+=======
+            <plugin>
+              <artifactId>maven-jxr-plugin</artifactId>
+            </plugin>
+            <plugin>
+              <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+              <artifactId>maven-pmd-plugin</artifactId>
+            </plugin>
+            <plugin>
+              <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
             </plugin>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>taglist-maven-plugin</artifactId>
@@ -97,6 +148,7 @@
         </configuration>
       </plugin>
     </plugins>
+<<<<<<< HEAD
 
     <pluginManagement>
       <plugins>
@@ -176,6 +228,74 @@
     </pluginManagement>
   </build>
 
+=======
+  </build>
+
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.8</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.4.1</version> <!-- updated to latest stable -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>3.1.1</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.15.0</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.4.1</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.0</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.0.0-M7</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.5</version> <!-- updated -->
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>taglist-maven-plugin</artifactId>
+        <version>2.4</version>
+      </plugin>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>8.0.0.M1</version>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+
+>>>>>>> a44b8a520c365c62841450dd6aa1a7b766135fce
   <dependencyManagement>
     <dependencies>
       <dependency>
